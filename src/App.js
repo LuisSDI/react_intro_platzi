@@ -8,8 +8,8 @@ import {TodoList} from './TodoList'
 import {TodoItem} from './TodoItem'
 import {CreateTodoButton} from './CreateTodoButton'
 const defaultTodos = [
-  { text: 'Cortar cebolla', completed: true },
-  { text: 'Cortar tomate', completed: true },
+  { text: 'Cortar cebolla', completed: false },
+  { text: 'Cortar tomate', completed: false },
   { text: 'Cortar pepino', completed: false },
   { text: 'Cortar aguacate', completed: false },
 ]
@@ -36,6 +36,24 @@ function App(props) {
     
   }
 
+  const completeTodos = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text == text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed =!newTodos[todoIndex].completed;
+    // todos[todoIndex] = {
+    //   text:todos[todoIndex].text,
+    //   completed:true,
+    // }
+    setTodos(newTodos);
+  }
+
+  const deleteTodos = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text == text);
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex,1);
+    setTodos(newTodos);
+  }
+
 
   return (
     <React.Fragment>
@@ -49,8 +67,13 @@ function App(props) {
       />
       <TodoList>
         {searchTodos.map(todo => (
-          <TodoItem key={todo.text} text= {todo.text} completed = {todo.completed} />
-        ))}
+          <TodoItem 
+          key={todo.text} 
+          text= {todo.text}
+           completed = {todo.completed} 
+           onComplete = {() => completeTodos(todo.text)} 
+           onDelete = {() => deleteTodos(todo.text)}/>
+ ))}
 
       </TodoList>
       <CreateTodoButton />
