@@ -1,10 +1,7 @@
 import React from 'react';
 import './TodoCounter.css';
 
-const estilos ={
-    color: 'red',
-    backgroundColor: 'yellow',
-};
+
 function TodoCounter() {
 
     return(
