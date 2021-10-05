@@ -23,7 +23,7 @@ function useLocalStorage(itemName, initialValue) {
           setError(error);
         }
         
-      }, 2000);
+      }, 1000);
     },);
     //TODO:Add [] to the second parameter
   
