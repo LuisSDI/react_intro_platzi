@@ -59,7 +59,7 @@ function TodoProvider(props) {
         <TodoContext.Provider
             value={{
                 loading,
-                error,
+                error,           
                 totalTodos,
                 completedTodos,
                 searchValue,
