@@ -1,24 +1,31 @@
 import React from 'react';
-import './TodoItem.css'
+import './TodoItem.css';
+import { DeleteIcon } from '../TodoIcon/DeleteIcon';
+import { AiFillCheckCircle } from 'react-icons/ai'
 
 function TodoItem(props) {
 
+  let checkColor = "gray";
+
+  if (props.completed) {
+    checkColor = "green";
+  }
 
   return (
     <li className="TodoItem">
-      <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
+      <AiFillCheckCircle
+        size={30}
+        color={checkColor}
         onClick={props.onComplete}
-      >
-        √
-      </span>
+        className="Test"
+      />
+
       <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
         {props.text}
       </p>
-      <span className="Icon Icon-delete"
-      onClick={props.onDelete}
-      >
-        X
-      </span>
+      <DeleteIcon
+        onDelete={props.onDelete}
+      />
     </li>
   )
 

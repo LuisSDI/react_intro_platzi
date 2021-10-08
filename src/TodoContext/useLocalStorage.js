@@ -10,7 +10,6 @@ function useLocalStorage(itemName, initialValue) {
         try {
           const localStorageItem = localStorage.getItem(itemName);
         let parsedItem;
-  
         if (!localStorageItem) {
           localStorage.setItem(itemName, JSON.stringify(initialValue));
           parsedItem = [];
@@ -20,11 +19,12 @@ function useLocalStorage(itemName, initialValue) {
         setItem(parsedItem);
         setLoading(false);
         } catch (error) {
-          setError(error);
+          console.log("Aqui esta el error");
+          console.log(error);
+          setError(true);
         }
-        
-      }, 1000);
-    },);
+      }, 3000);
+    },[]);
     //TODO:Add [] to the second parameter
   
     const saveItem = (newItem) => {

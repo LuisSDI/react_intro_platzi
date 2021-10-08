@@ -7,17 +7,22 @@ import { TodoItem } from '../TodoItem'
 import { CreateTodoButton } from '../CreateTodoButton'
 import {Modal} from '../Modal'
 import { TodoForm } from "../TodoForm";
+import {LoadingComponent} from '../LoadingComponent'
+import "./App.css"
 
 function AppUI() {
   const { error,
     loading,
     searchTodos,
     completeTodos,
+    totalTodos,
     deleteTodos,
     openModal,
-    setOpenModal
+    setOpenModal,
   } = React.useContext(TodoContext);
-  return (
+
+  
+    return (
     <React.Fragment>
       <TodoCounter
       />
@@ -25,9 +30,11 @@ function AppUI() {
       />
       
           <TodoList>
-            {error && <p> Hubo un error</p>}
-            {loading && <p> Estamos cargando</p>}
-            {(!loading && searchTodos.lenght === 0) && <p> Crea un TODO</p>}
+          {loading &&
+            <LoadingComponent/>}
+            {(!loading &&  totalTodos < 1) && <p
+            className="TODOEmpty"
+            >You dont have any TODO<br/> make a new one</p>}
             {searchTodos.map(todo => (
               <TodoItem
                 key={todo.text}
@@ -42,10 +49,11 @@ function AppUI() {
             <Modal>
             <TodoForm/>
           </Modal>
-          ) }
+          ) }{!error && !loading &&
+
       <CreateTodoButton 
       setOpenModal = {setOpenModal}
-      openModal = {openModal}/>
+      openModal = {openModal}/>}
 
     </React.Fragment>
 

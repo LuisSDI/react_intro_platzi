@@ -1,0 +1,37 @@
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 26px;
+    color: black;
+  }
+
+.LoadingComponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+}
+
+.LoadingComponent-error{
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+}
+
+.LoadingComponent-loading{
+    padding-top: 36px;
+    display: flex;
+    width:20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+}
