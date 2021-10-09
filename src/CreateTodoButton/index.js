@@ -1,5 +1,6 @@
 import React from 'react';
 import './CreateTodoButton.css'
+import { ReactComponent as PlusSVG } from './plus.svg';
 
 function CreateTodoButton(props) {
     const onClickButton = () => {
@@ -9,7 +10,9 @@ function CreateTodoButton(props) {
         <button 
         className='CreateTodoButton'
         onClick = {() => onClickButton()}
-        >+
+        ><PlusSVG fill="white">
+
+        </PlusSVG>
         </button>
     )
     
