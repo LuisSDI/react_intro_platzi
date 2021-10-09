@@ -24,3 +24,7 @@
   .CreateTodoButton:hover {
     transform: rotate(224deg);
   }
+
+  .PlusSVG{
+    width: 50%;
+  }
