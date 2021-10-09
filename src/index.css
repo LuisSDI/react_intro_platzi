@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F2F4F5;
-  color: #1E1E1F;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: white;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 

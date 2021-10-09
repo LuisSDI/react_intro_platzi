@@ -59,11 +59,6 @@ function TodoProvider(props) {
         saveTodos(newTodos);
     }
 
-    // console.log('Antes del use effect');
-    // React.useEffect(()=>{
-    //   console.log('use effect');
-    // }, [totalTodos]);
-    // console.log('Despues del use effect');
 
 
 

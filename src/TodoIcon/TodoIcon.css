@@ -28,3 +28,9 @@
 .Icon-container:hover .Icon-svg--delete {
   fill: red;
 }
+
+@media only screen and (max-width: 768px) {
+.Icon-container .Icon-svg--delete {
+  fill: red;
+}
+}

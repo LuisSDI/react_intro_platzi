@@ -34,4 +34,10 @@ p{
     align-items: center;
     align-content: center;
     flex: 1;
+    
+}
+
+.LoadingComponent-loading-text {
+    color: white;
+    
 }

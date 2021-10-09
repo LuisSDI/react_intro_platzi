@@ -34,16 +34,15 @@ function LoadingComponent() {
                         <CircularProgressbar
                             value={percentage}
                             styles={buildStyles({
-                                pathColor: "red",
+                                pathColor: "#95C623",
                                 pathTransition:
                                     percentage === 0 ? "none" : "stroke-dashoffset 0.5s ease 0s",
-
                             },
                             )}
                         />
                     )}
                 </ChangingProgressProvider>
-                <p> Loading</p>
+                <p className="LoadingComponent-loading-text"> Loading</p>
             </div>
             }
         </div>
