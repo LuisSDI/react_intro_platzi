@@ -10,7 +10,9 @@ function CreateTodoButton(props) {
         <button 
         className='CreateTodoButton'
         onClick = {() => onClickButton()}
-        ><PlusSVG fill="white">
+        ><PlusSVG fill="white"
+        width={40}
+        height={40}>
 
         </PlusSVG>
         </button>
