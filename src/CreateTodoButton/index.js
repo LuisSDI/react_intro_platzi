@@ -11,12 +11,13 @@ function CreateTodoButton(props) {
         className='CreateTodoButton'
         onClick = {() => onClickButton()}
         >
-            <div>
+            {/* <div> */}
                 <PlusSVG fill="white"
         
         className="PlusSVG">
 
-        </PlusSVG></div>
+        </PlusSVG>
+        {/* </div> */}
         </button>
     )
     
